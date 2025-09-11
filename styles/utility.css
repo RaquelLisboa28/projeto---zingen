@@ -16,7 +16,7 @@
 
 .container {
   --max-width: 375px;
-  width: min(var(--max-width), 100% - var(--px-lg) * 2);
+  width: min(var(--max-width), calc(100% - (var(--px-lg) * 2)));
   margin-inline: auto;
   /* border: solid violet; */
 }
@@ -50,7 +50,7 @@
   display: grid;
 }
 
-@media (width >= 80em) {
+@media (min-width: 80em) {
   .container{
     --max-width: 80em;
   }
